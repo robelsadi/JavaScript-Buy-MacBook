@@ -7,81 +7,112 @@
     <title>Your iMac Shop</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        td {font-weight: bolder;}
+    </style>
 </head>
+
 <body>
-    <main class="buying-area">
-        <section class="container g-5 my-4 overflow-hidden">
-            <div class="row">
-                <!-- Product Image -->
-                <div class="col-lg-5 col-md-5 col-12 gx-5">
-                    <img src="images/mac.png" alt="" class="img fluid" width="95%" height="380">
-                </div>
-                <!-- Product configuration Details added -->
-                <div class="col-lg-7 col-md-7 col-12 gx-5">
-                    <h2 class="laptop-title my-3">Customise your Blue 24‑inch iMac with Apple M1 chip.
-                    </h2>
-                    <span class="laptop-subtitle">Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine</span>
-                    <div class="memory my-4">
-                        <h5 class="fw-bold my-3">Memory</h5>
-                        <div class="d-grid gap-3">
-                            <div class="p-2 border">8GB unified memory</div>
-                            <div class="p-2 border">16GB unified memory</div>
-                        </div>
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <!-- Product Image Area -->
+                    <div class="col-5 p-4">
+                        <img class="img-fluid" src="images/mac.png" alt=" MaceBook Featured Image">
                     </div>
-                    <div class="storage my-4">
-                        <h5 class="fw-bold my-3">Storage</h5>
-                        <div class="d-grid gap-3">
-                            <div class="p-2 border">256GB SSD storage</div>
-                            <div class="p-2 border">512GB SSD storage</div>
-                            <div class="p-2 border">1TB SSD storage</div>
+                    <!-- Product Description Area Start-->
+                    <div class="col-7 p-4">
+                        <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+                        <p>
+                            Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores. 7-core
+                            GPU,and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB
+                            4ports Magic Mouse Magic Keyboard-Us English.
+                        </p>
+                        <div class="memory mt-5">
+                            <h3>Memory</h3>
+                            <div class="button-group">
+                                <button id="memory-8gb" type="button" class="btn btn-outline-dark">8GB unified
+                                    memory</button>
+                                <button id="memory-16gb" type="button" class="btn btn-outline-dark">16GB unified
+                                    memory</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="delivery my-4">
-                        <h5 class="fw-bold my-3">Choose your Delivery Option</h5>
-                        <div class="d-grid gap-3">
-                            <div class="p-2 border">Normarl Delivery FREE-$0</div>
-                            <div class="p-2 border">Express Delivery EXTRA-$20</div>
+                        <div class="storage mt-5">
+                            <h3>Storage</h3>
+                            <div class="button-group">
+                                <button id="storage-256gb" type="button" class="btn btn-outline-dark">256GB SSD
+                                    storage</button>
+                                <button id="storage-512gb" type="button" class="btn btn-outline-dark">512GB SSD
+                                    storage</button>
+                                <button id="storage-1tb" type="button" class="btn btn-outline-dark">1TB SSD
+                                    storage</button>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Total-price area added -->
-                    <div class="check-price">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between">
-                                <span class="fw-bold">Best Price</span>
-                                <strong>$<span>1299</span></strong>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <span class="fw-bold">Extra Memory Cost</span>
-                                <strong>$<span>0</span></strong>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between">
-                                <span class="fw-bold">Extra Storage Cost</span>
-                                <strong>$<span>0</span></strong>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between border-0">
-                                <span class="fw-bold">Delivery Charge</span>
-                                <strong>$<span>0</span></strong>
-                            </li> 
-                            <hr class="border border-dark m-1"> <!--  horizontal line add -->
-                            <li class="list-group-item d-flex justify-content-between border-bottom">
-                                <span class="fw-bold">Total Price</span>
-                                <strong>$<span>1299</span></strong>
-                            </li> 
-                        </ul>
-                        <!-- promo code button add -->
-                        <div class="card p-2 my-4 border-0">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Type Your Promo code">
-                                <button type="submit" class="btn btn-danger">Apply</button>
+                        <div class="delivery mt-5">
+                            <h3>Choose your delivery option</h3>
+                            <div class="button-group">
+                                <button id="free-delivery" type="button" class="btn btn-outline-dark">Friday, Aug 25
+                                    FREE Prime
+                                    Delivery</button>
+                                <button id="express-delivery" type="button" class="btn btn-outline-dark">Friday, Aug 21
+                                    Delivery charge
+                                    $20</button>
+                            </div>
+                        </div>
+                        <div class="price mt-5  w-50">
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr>
+                                        <td>Best Price</td>
+                                        <td>$
+                                            <span id="best-price">1299</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extra Memory Cost</td>
+                                        <td>$
+                                            <span id="memory-cost">0</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extra Storage Cost</td>
+                                        <td>$
+                                            <span id="storage-cost">0</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Delivery Charge</td>
+                                        <td>$
+                                            <span id="delivery-cost">0</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <td class="border-0">Total Price</td>
+                                    <td class="border-0">$
+                                        <span id="extra-total-cost">1299</span>
+                                    </td>
+                                </tfoot>
+                            </table>
+                            <!-- Promo Code Area -->
+                            <p class="mb-2 fw-bolder fs-4 mb-0">Add Promo Code</p>
+                            <p id="wrong-promo" class="text-danger fw-bold fst-italic d-none p-0 m-0 mb-2">Sorry!!! Enter the right promo code!</p>
+                            <div class="promo d-flex mt-0">
+                                <input id="promo-code" type="text" class="form-control rounded-0">
+                                <button id="apply-btn" class="btn btn-danger rounded-0">Apply</button>
                             </div>
                         </div>
                     </div>
+                    <!-- Product Description Area End-->
                 </div>
+                <hr>
+                <!-- Total Price Calculate Area -->
+                <h1 class="text-center">Total: $
+                    <span id="in-total">1299</span>
+                </h1>
             </div>
-            <!--  horizontal line add -->
-            <hr class="border border-dark m-1"> 
-            <!-- show total-price -->
-            <h1 class="my-4"><center>Total: $<span>1299</span></center></h1>
         </section>
     </main>
     <!-- Bootstrap JS -->
